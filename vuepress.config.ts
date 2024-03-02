@@ -6,8 +6,8 @@ import defaultTheme from '@vuepress/theme-default';
 import webpackBundler from "@vuepress/bundler-webpack";
 import * as DefinePlugin from "webpack/lib/DefinePlugin.js";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { sitemapPlugin } from '@vuepress/plugin-sitemap';
+// import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { defineUserConfig } from "vuepress";
 import { domain, getBase, isDevelop } from "./getBase";
@@ -124,16 +124,16 @@ const conf = defineUserConfig({
     sitemapPlugin(
       { hostname: domain }
     ),
-    docsearchPlugin({
-      apiKey: '662e98933c5c5513d7488c30a98770f1',
-      indexName: 'zigbee2mqtt.io',
-      appId: 'K1BM3QYQ34',
-      locales: {
-        '/': {
-          placeholder: 'Search',
-        },
-      },
-    }),
+    // docsearchPlugin({
+    //   apiKey: '662e98933c5c5513d7488c30a98770f1',
+    //   indexName: 'zigbee2mqtt.io',
+    //   appId: 'K1BM3QYQ34',
+    //   locales: {
+    //     '/': {
+    //       placeholder: 'Search',
+    //     },
+    //   },
+    // }),
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, 'docs/.vuepress/components'),
       components: {
